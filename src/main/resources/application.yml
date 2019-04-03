@@ -1,0 +1,22 @@
+spring.profiles.active: dev
+---
+## dev
+spring:
+  datasource:
+    username: sa
+    password: xuexiaobo.
+    url: jdbc:mysql://localhost:3306/workflow?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+server:
+  port: 9102
+flowable:
+  async-executor-activate: false
+  idm:
+    enabled: true
